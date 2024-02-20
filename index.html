@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <title>유피클라우드</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, minimal-ui, viewport-fit=cover, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+	<meta name="description" content="가장 안정적인 무인 프린팅기술">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="유피클라우드">
+  <meta property="og:description" content="가장 안정적인 무인 프린팅기술">
+  <meta property="og:image" content="">
+  <meta property="twitter:title" content="유피클라우드">
+  <meta property="twitter:description" content="가장 안정적인 무인 프린팅기술">
+  <meta property="twitter:image" content="">	
+
+  <link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/reset.css">	
+	<link rel="stylesheet" href="css/cncicon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  
+	<script src="js/jquery.min.js"></script>
+  <script src="js/ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+
+</head>
+<body>
+  <div id="wrap" class="flex">
+    <div class="leftmenu-wrap">
+      <div class="pc-header">
+        <h1 class="logo">
+          <img src="img/up-logo.png" alt="upcloud" class="up-logo">
+        </h1>
+        <div class="header-greeting">
+          <p>안녕하세요, 000님</p>
+          <a href="" class="logout-btn">
+            <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
+            <span>LOGOUT</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mo-header">
+        <div class="flex">
+          <h1 class="logo"><img src="img/up-logo.png" alt="upcloud" class="up-logo"></h1>
+          <div class="mo-header-btn-wrap">
+            <a href="" class="mo-logout-btn btn">
+              <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
+            </a>
+            <button type="button" class="mo-header-menu-btn btn"><svg width="16" height="16" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M27 193.6c-8.2-8.2-12.2-18.6-12.2-31.2s4-23 12.2-31.2S45.6 119 58.2 119h912.4c12.6 0 23 4 31.2 12.2s12.2 18.6 12.2 31.2-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2m974.8 285.2c8.2 8.2 12.2 18.6 12.2 31.2s-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2S14.8 522.6 14.8 510s4-23 12.2-31.2 18.6-12.2 31.2-12.2h912.4c12.6 0 23 4 31.2 12.2m0 347.4c8.2 8.2 12.2 18.6 12.2 31.2s-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2S14.8 870 14.8 857.4s4-23 12.2-31.2S45.6 814 58.2 814h912.4c12.6 0 23 4.2 31.2 12.2" fill="#fff"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="leftmenu">
+        <ul class="gnb">
+          <li>
+            <a href="#" class="menu-label"><span>회원관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">사업자관리</a></li>
+              <li><a href="">매장관리</a></li>
+              <li><a href="">회원관리</a></li>
+              <li><a href="">로그인현황</a></li>
+              <li><a href="">1대1답변</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>서비스관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">단말기관리</a></li>
+              <li><a href="">단말기무과금내역</a></li>
+              <li><a href="">단말기오류내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>유피카드</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">유피카드 사용추이</a></li>
+              <li><a href="">유피카드 결제비율</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>기기관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">복합기관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>PC관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href=""></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>광고관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href=""></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>매출관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">당일내역</a></li>
+              <li><a href="">매출내역</a></li>
+              <li><a href="">결제내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>데이터관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">매출분석</a></li>
+              <li><a href="">이용자분석</a></li>
+              <li><a href="">출력량분석</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>정산관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">단말기별 정산내역</a></li>
+              <li><a href="">단말기별 취소내역</a></li>
+              <li><a href="">단말기별 결제건수</a></li>
+              <li><a href="">단말기별 객단가</a></li>
+              <li><a href="">매장별 정산내역</a></li>
+              <li><a href="">매장별 취소내역</a></li>
+              <li><a href="">매장별 결제건수</a></li>
+              <li><a href="">매장별 객단가</a></li>
+              <li><a href="">유피카드 정산내역</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>마이페이지</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href="">내정보관리</a></li>
+              <li><a href="">1대1문의</a></li>
+              <li><a href="">공지사항</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>시스템관리</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><a href=""></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div class="content-wrap">
+        <div class="content-inner">
+          <!--title-->
+          <div class="content-title flex">
+            <div class="store-name flex">
+              <h2>프린트카페42_성균관대 정문점</h2>
+              <div class="search-store">
+                <input type="text" class="input-text" placeholder="매장명을 입력해주세요." autocomplete="off">
+                <button type="button" class="search-store-btn more-circle"><i class="icon-arrow06"></i></button>
+              </div>
+            </div>
+            <span class="date-info"><i class="icon-sign42"></i> 전일기준</span>
+          </div>
+
+          <div class="flex grid3 main-statistics">
+            <div class="item item2">
+              <div class="flex statistics-wrap">
+                <div class="item-header flex">
+                  <img src="img/i-dan.png" alt="">
+                  <strong>단말기 상태</strong>
+                </div>
+                <div class="item-body flex">
+                  <dl>
+                    <dt>전체</dt>
+                    <dd class="blue">1,488</dd>
+                  </dl>
+                  <dl>
+                    <dt>정상</dt>
+                    <dd class="blue">1,292</dd>
+                  </dl>
+                  <dl>
+                    <dt>오류</dt>
+                    <dd class="red"><a href="">196</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>무과금</dt>
+                    <dd class="red"><a href="">478</a></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="item item1">
+              <div class="flex statistics-wrap">
+                <div class="item-header flex">
+                  <img src="img/i-users.png" alt="">
+                  <strong>이용자수</strong>
+                </div>
+                <div class="item-body flex">
+                  <dl>
+                    <dt>MAU</dt>
+                    <dd class="blue">447,402</dd>
+                  </dl>
+                  <dl>
+                    <dt>DAU</dt>
+                    <dd class="blue">10,292</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex grid2 main-dashboard-card">
+            <!--이번달 결제 정보-->
+            <div class="item">
+              <div class="item-header flex">
+                <p><strong>이번달 결제 정보</strong></p>
+                <a href="" class="more-btn"><span class="more-circle"><i class="icon-arrow06"></i></span> 상세보기</a>
+              </div>
+              <div class="item-body">
+                <div class="flex">
+                  <!--이번달 누적 거래액-->
+                  <div class="data-item">
+                    <div class="data-item-header flex">
+                      <b>이번달 누적 거래액</b>
+                      <span class="blue">692,551,630원</span>
+                    </div>
+                    <div class="data-item-body">
+                      <ul>
+                        <li class="flex"><span>신용카드</span><span class="gray">667,394,470원</span></li>
+                        <li class="flex"><span>티머니</span><span class="gray">4,844,560원</span></li>
+                        <li class="flex"><span>유피카드</span><span class="gray">20,312,600원</span></li>
+                        <li class="flex"><span>기타</span><span class="gray">0원</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--이번달 결제 건수-->
+                  <div class="data-item">
+                    <div class="data-item-header flex">
+                      <b>이번달 결제 건수</b>
+                      <span class="blue">868,862건</span>
+                    </div>
+                    <div class="data-item-body">
+                      <ul>
+                        <li class="flex"><span>복사</span><span class="gray">88,958건</span></li>
+                        <li class="flex"><span>출력</span><span class="gray">721,881건</span></li>
+                        <li class="flex"><span>스캔</span><span class="gray">50,959건</span></li>
+                        <li class="flex"><span>팩스</span><span class="gray">7,064건</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--오늘 결제 정보-->
+            <div class="item">
+              <div class="item-header flex">
+                <p><strong>오늘 결제 정보</strong></p>
+                <a href="" class="more-btn"><span class="more-circle"><i class="icon-arrow06"></i></span> 상세보기</a>
+              </div>
+              <div class="item-body">
+                <div class="flex">
+                  <!--오늘 누적 거래액-->
+                  <div class="data-item">
+                    <div class="data-item-header flex">
+                      <b>오늘 누적 거래액</b>
+                      <span class="blue">692,551,630원</span>
+                    </div>
+                    <div class="data-item-body">
+                      <ul>
+                        <li class="flex"><span>신용카드</span><span class="gray">667,394,470원</span></li>
+                        <li class="flex"><span>티머니</span><span class="gray">4,844,560원</span></li>
+                        <li class="flex"><span>유피카드</span><span class="gray">20,312,600원</span></li>
+                        <li class="flex"><span>기타</span><span class="gray">0원</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--오늘 결제 건수-->
+                  <div class="data-item">
+                    <div class="data-item-header flex">
+                      <b>오늘 결제 건수</b>
+                      <span class="blue">868,862건</span>
+                    </div>
+                    <div class="data-item-body">
+                      <ul>
+                        <li class="flex"><span>복사</span><span class="gray">88,958건</span></li>
+                        <li class="flex"><span>출력</span><span class="gray">721,881건</span></li>
+                        <li class="flex"><span>스캔</span><span class="gray">50,959건</span></li>
+                        <li class="flex"><span>팩스</span><span class="gray">7,064건</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--결제비율 차트-->
+          <div class="flex grid4 main-piechart-wrap">
+            <div class="item">
+              <div class="item-header">
+                <p><strong>이달의 결제 비율</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart1" width="400" height="260" aria-label="이달의 결제 비율" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>이달의 색상 비율</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart2" width="400" height="260" aria-label="이달의 색상 비율" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>이달의 기능별 비율</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart3" width="400" height="260" aria-label="이달의 기능별 비율" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>이달의 종이별 비율</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart4" width="400" height="260" aria-label="이달의 종이별 비율" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!--사용비율 차트-->
+          <div class="flex grid3 main-barchart-wrap">
+            <div class="item verticalbar-chart item1">
+              <div class="item-header">
+                <p><strong>이달의 사용 비율</strong></p>
+              </div>
+              <div class="item-body">
+                <ul class="horizontalbar-wrap">
+                  <li class="flex">
+                    <strong class="label"><span class="label-num">0</span> ~ <span class="label-num">100</span></strong>
+                    <span class="bar-wrap"><span class="bar" style="width: 80%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                    <span class="percent">28%</span>
+                  </li>
+                  <li class="flex">
+                    <strong class="label"><span class="label-num">100</span> ~ <span class="label-num">500</span></strong>
+                    <span class="bar-wrap"><span class="bar" style="width: 100%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                    <span class="percent">28%</span>
+                  </li>
+                  <li class="flex">
+                    <strong class="label"><span class="label-num">500</span> ~ <span class="label-num">1,000</span></strong>
+                    <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                    <span class="percent">28%</span>
+                  </li>
+                  <li class="flex">
+                    <strong class="label"><span class="label-num">1,000</span> ~ <span class="label-num">5,000</span></strong>
+                    <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                    <span class="percent">28%</span>
+                  </li>
+                  <li class="flex">
+                    <strong class="label"><span class="label-num">5,000</span> ~ </strong>
+                    <span class="bar-wrap"><span class="bar" style="width: 40%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                    <span class="percent">28%</span>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+            <div class="item barmix-chart item2">
+              <div class="item-header">
+                <p><strong>지난 7일간 결제내역</strong> <span class="gray">2024.01.21 ~ 01.27</span></p>
+              </div>
+              <div class="item-body">
+                <canvas id="barmix" width="400" height="125" aria-label="지난 7일간 결제내역" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!--board-->
+          <div class="flex grid2 main-board-wrap">
+            <!--공지사항-->
+            <div class="item">
+              <div class="item-header flex">
+                <p><strong>공지사항</strong></p>
+                <a href="" class="more-btn"><span class="more-circle"><i class="icon-arrow06"></i></span> 더보기</a>
+              </div>
+              <div class="item-body">
+                <div class="main-board-list">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <span class="board-title">웹팩스 시스템 정기 점검 안내 <span class="new-icon">N</span></span>
+                        <span class="board-date">2024-01-15 11:19</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="board-title">유피클라우드 V8 업그레이드 안내</span>
+                        <span class="board-date">2024-01-15 11:19</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="board-title">EP-731N제조사(KICC) 유지보수 종료 안내</span>
+                        <span class="board-date">2024-01-15 11:19</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--1:1문의-->
+            <div class="item">
+              <div class="item-header flex">
+                <p><strong>1:1문의</strong></p>
+                <a href="" class="more-btn"><span class="more-circle"><i class="icon-arrow06"></i></span> 더보기</a>
+              </div>
+              <div class="item-body">
+                <div class="main-board-list">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <span class="board-title">웹팩스 시스템 정기 점검 안내 <span class="new-icon">N</span></span>
+                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="board-title">유피클라우드 V8 업그레이드 안내 </span>
+                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="board-title">EP-731N제조사(KICC) 유지보수 종료 안내</span>
+                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <div class="footer">
+        <ul>
+          <li><b>회사명</b><span>(주)유피소프트</span></li>
+          <li><b>대표자</b><span>이현우</span></li>
+          <li><b>사업자 등록안내</b><span>240-87-00161</span></li>
+          <li><b>상표등록</b><span>제 41-0375804호</span></li>
+        </ul>
+        <ul>
+          <li><b>개인정보취급관리자</b><span>김아영 (upsoft@upsoft.ai)</span></li>
+          <li><b>채용문의</b><span>happyluv84@upsoft.ai</span></li>
+          <li><b>마케팅제휴</b><span>hm53@upsoft.ai</span></li>
+          <li><b>본사</b><span>서울시 성동구 성수이로 10길 14 에이스 하이엔드 성수타워 1106-1108호</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--//#wrap-->
+  <!--차트 스크립트-->
+<script>
+  //Global 옵션
+	Chart.defaults.global.defaultFontFamily = "Nanum Gothic";
+	Chart.defaults.global.defaultFontColor = 'black';
+	Chart.defaults.global.defaultFontSize = 14;
+
+	var ctx1 = document.getElementById('piechart1').getContext('2d');
+	var ctx2 = document.getElementById('piechart2').getContext('2d');
+	var ctx3 = document.getElementById('piechart3').getContext('2d');
+	var ctx4 = document.getElementById('piechart4').getContext('2d');	 
+
+  var data1 = {
+		labels: ["신용카드 9%", "티머니 9%","유피카드 12%","기타 12%"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: ['#019fe0', '#bd256e', "#efdf41","#d4d4d4"],
+				data: [130854066,81570323,40383538,64511949]
+			}
+		]
+	};
+	var data2 = {
+		labels: ["컬러 28%", "흑백 72%"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: ['#019fe0', '#bd256e'],
+				data: [130854066,81570323]
+			}
+		]
+	};
+	var data3 = {
+		labels: ["복사 9%", "출력 9%","스캔 89%","팩스 12%"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: ['#019fe0', '#bd256e', "#efdf41","#d4d4d4"],
+				data: [130854066,81570323,40383538,64511949]
+			}
+		]
+  };
+  var data4 = {
+		labels: ["A4 9%", "A3 9%" ,"B4 12%" ,"A5 12%"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: ['#019fe0', '#bd256e', "#efdf41","#d4d4d4"],
+				data: [130854066,81570323,40383538,64511949]
+			}
+		]
+  };
+  
+  var options = {
+   
+		legend : {
+      position: 'bottom',
+      fullWidth: false,
+      labels:{
+          fontFamily: "'Nanum Gothic', 'Dotum', 'AppleGothic', 'sans-serif'",
+          fontStyle:'600',
+          fontSize:13,
+          boxWidth:8,
+          padding: 10,
+          usePointStyle:true,
+          pointStyle:'circle',          
+        }
+    },
+    elements: {
+      arc: {
+        borderWidth: 0, // <-- Set this to derired value
+        borderColor:'#fff'
+      }
+    },
+		//rotation: -1 * Math.PI,
+		tooltips:{
+			enabled: true,
+			callbacks:{
+				label: function(tooltipItem, data){
+					var indice = tooltipItem.index;           
+          let result = data.datasets[0].data[indice].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');      
+					return  data.labels[indice] +' : '+ result + '원';
+				}
+			}
+		},
+		plugins :{
+			datalabels: {
+				color: '#fff',
+				textAlign: 'center',
+				formatter: function(value, ctx) {
+					if (value > 0)
+					{
+						return value + '%';
+					}else {
+						return '';
+					}
+					
+				}
+			}
+		},
+    
+	};
+  
+  var homeChart1 = new Chart(ctx1, {
+		type: 'pie',
+		data: data1,
+		options: options
+	});	
+	var homeChart2 = new Chart(ctx2, {
+		type: 'pie',
+		data: data2,
+		options: options
+	});
+	var homeChart3 = new Chart(ctx3, {
+		type: 'pie',
+		data: data3,
+		options: options
+	});
+  var homeChart4 = new Chart(ctx4, {
+		type: 'pie',
+		data: data4,
+		options: options
+	});
+
+  //막대차트
+  var ctx = document.getElementById("barmix").getContext('2d');
+  var data = {
+    labels: ['01/21','01/22','01/23','01/24','01/25','01/26','01/27'],
+    datasets: [
+      {
+        label: '결제건수',
+        yAxisID: 'A',
+        data: [130,8157,4038,645,5805,1224,120],
+        backgroundColor: '#019fe0'
+      }, 
+      {
+        label: '결제금액',
+        yAxisID: 'B',
+        data: [115165026,119661623,52900321,47434652,173107801,95038490,88248071],
+        backgroundColor: '#bd256e'
+      }
+    ]    
+  };
+  var barOption = {
+    legend : {
+      position: 'top',
+      align: "end",
+      fullWidth: false,
+      labels:{
+          fontFamily: "'Nanum Gothic', 'arial', 'Verdana', 'Dotum', 'AppleGothic', 'sans-serif'",
+          fontStyle:'600',
+          fontSize:14,
+          boxWidth:8,
+          padding: 10,
+          usePointStyle:true,
+          pointStyle:'circle',          
+        }
+    },
+    tooltips:{
+      enabled: true,
+      callbacks:{
+        label: function(tooltipItem, data){
+          var indice = tooltipItem.datasetIndex;
+          return data.datasets[indice].label +' : '+ Number(tooltipItem.value).toLocaleString()
+        }
+      }
+    },
+    scales:{
+      yAxes: [
+        {        
+          id: 'A',        
+          type: 'linear',        
+          position: 'left',        
+          ticks: {
+            fontSize:14,
+            fontColor: '#888',
+            callback: function(value, index, values) {
+              return value.toLocaleString() + ' 건';          
+            }     
+          }
+         }, 
+         {        
+          id: 'B',        
+          type: 'linear',        
+          position: 'right',        
+          ticks: {
+            fontSize:14,
+            fontColor: '#888',
+            callback: function(value, index, values) {
+              return value.toLocaleString() + ' 원';          
+            }     
+          }    
+        },
+      ]
+    },
+    plugins :{
+      datalabels: {
+        color: 'transparent',
+        textAlign: 'center',
+        font: {
+          lineHeight: 1.6
+        },
+      }
+    } 
+    
+  }  
+  var barChart = new Chart(ctx, {
+    type: 'bar',
+		data: data,
+		options: barOption    
+  });
+
+</script>
+</body>
+</html>
