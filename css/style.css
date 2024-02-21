@@ -42,7 +42,7 @@ body {scroll-behavior: smooth;}
 .leftmenu .gnb > li .sub-menu li a:hover {background: #f7f7f7;}
 
 /*leftmenu img*/
-.leftmenu .gnb > li > a.menu-label {background-size: 26px auto !important;}
+.leftmenu .gnb > li > a.menu-label {background-size: 24px auto !important;}
 .leftmenu .gnb > li:nth-child(1) > a {background: url(../img/i-leftuser.png) no-repeat left center; }
 .leftmenu .gnb > li:nth-child(2) > a {background: url(../img/i-leftservice.png) no-repeat left center;}
 .leftmenu .gnb > li:nth-child(3) > a {background: url(../img/i-leftupcard.png) no-repeat left center;}
@@ -98,6 +98,7 @@ body {scroll-behavior: smooth;}
 .main-statistics .item {border: 6px solid #f1f1f1; padding: 38px; }
 .main-statistics .flex.statistics-wrap {justify-content: space-between; align-items: center;}
 .main-statistics .item-header.flex {flex-flow: column; gap: 5px; align-items: center; padding: 0;}
+.main-statistics .item-header.flex img {width: 40px;}
 .main-statistics .item-header strong {font-weight: 700; font-size: 18px;}
 .main-statistics dl {padding: 0 30px 0 90px; border-right: 1px solid #d7d7d7; text-align: right;}
 .main-statistics .item1 dl {padding: 0 30px 0 40px;}
@@ -210,9 +211,6 @@ body {scroll-behavior: smooth;}
 }
 
 @media all and (max-width:1099.99px){
-}
-
-@media all and (max-width:757.99px){
   body.no-scroll {overflow: hidden;}
   #wrap.flex {flex-flow: column; gap: 10px;}
 
