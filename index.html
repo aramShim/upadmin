@@ -50,7 +50,13 @@
             <a href="" class="mo-logout-btn btn">
               <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
             </a>
-            <button type="button" class="mo-header-menu-btn btn"><svg width="16" height="16" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M27 193.6c-8.2-8.2-12.2-18.6-12.2-31.2s4-23 12.2-31.2S45.6 119 58.2 119h912.4c12.6 0 23 4 31.2 12.2s12.2 18.6 12.2 31.2-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2m974.8 285.2c8.2 8.2 12.2 18.6 12.2 31.2s-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2S14.8 522.6 14.8 510s4-23 12.2-31.2 18.6-12.2 31.2-12.2h912.4c12.6 0 23 4 31.2 12.2m0 347.4c8.2 8.2 12.2 18.6 12.2 31.2s-4 23-12.2 31.2-18.6 12.2-31.2 12.2H58.2c-12.6 0-23-4-31.2-12.2S14.8 870 14.8 857.4s4-23 12.2-31.2S45.6 814 58.2 814h912.4c12.6 0 23 4.2 31.2 12.2" fill="#fff"/></svg></button>
+            <button type="button" class="mo-header-menu-btn btn">
+              <div class="menu-wrap">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -342,28 +348,38 @@
                 <ul class="horizontalbar-wrap">
                   <li class="flex">
                     <strong class="label"><span class="label-num">0</span> ~ <span class="label-num">100</span></strong>
-                    <span class="bar-wrap"><span class="bar" style="width: 80%"><b aria-label="20,312,600">20,312,600</b></span></span>
-                    <span class="percent">28%</span>
+                    <div class="bar-percent">
+                      <span class="bar-wrap"><span class="bar" style="width: 80%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                      <span class="percent">28%</span>
+                    </div>
                   </li>
                   <li class="flex">
                     <strong class="label"><span class="label-num">100</span> ~ <span class="label-num">500</span></strong>
-                    <span class="bar-wrap"><span class="bar" style="width: 100%"><b aria-label="20,312,600">20,312,600</b></span></span>
-                    <span class="percent">28%</span>
+                    <div class="bar-percent">
+                      <span class="bar-wrap"><span class="bar" style="width: 100%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                      <span class="percent">28%</span>
+                    </div>
                   </li>
                   <li class="flex">
                     <strong class="label"><span class="label-num">500</span> ~ <span class="label-num">1,000</span></strong>
-                    <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
-                    <span class="percent">28%</span>
+                    <div class="bar-percent">
+                      <span class="bar-wrap"><span class="bar" style="width: 80%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                      <span class="percent">28%</span>
+                    </div>
                   </li>
                   <li class="flex">
                     <strong class="label"><span class="label-num">1,000</span> ~ <span class="label-num">5,000</span></strong>
-                    <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
-                    <span class="percent">28%</span>
+                    <div class="bar-percent">
+                      <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                      <span class="percent">28%</span>
+                    </div>
                   </li>
                   <li class="flex">
                     <strong class="label"><span class="label-num">5,000</span> ~ </strong>
-                    <span class="bar-wrap"><span class="bar" style="width: 40%"><b aria-label="20,312,600">20,312,600</b></span></span>
-                    <span class="percent">28%</span>
+                    <div class="bar-percent">
+                      <span class="bar-wrap"><span class="bar" style="width: 60%"><b aria-label="20,312,600">20,312,600</b></span></span>
+                      <span class="percent">28%</span>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -424,19 +440,28 @@
                     <li>
                       <a href="">
                         <span class="board-title">웹팩스 시스템 정기 점검 안내 <span class="new-icon">N</span></span>
-                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                        <span class="board-date">
+                          <span class="board-date1">2024-01-15 11:19</span> 
+                          <span class="board-qu">답변완료</span>
+                        </span>                       
                       </a>
                     </li>
                     <li>
                       <a href="">
                         <span class="board-title">유피클라우드 V8 업그레이드 안내 </span>
-                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                        <span class="board-date">
+                          <span class="board-date1">2024-01-15 11:19</span> 
+                          <span class="board-qu">답변완료</span>
+                        </span>                      
                       </a>
                     </li>
                     <li>
                       <a href="">
                         <span class="board-title">EP-731N제조사(KICC) 유지보수 종료 안내</span>
-                        <span class="board-date">2024-01-15 11:19 <span class="board-qu">답변완료</span></span>                      
+                        <span class="board-date">
+                          <span class="board-date1">2024-01-15 11:19</span> 
+                          <span class="board-qu">답변완료</span>
+                        </span>                        
                       </a>
                     </li>
                   </ul>

@@ -131,13 +131,14 @@ body {scroll-behavior: smooth;}
 .horizontalbar-wrap li > strong.label {width: 30%; font-weight: 700; white-space: nowrap;}
 .horizontalbar-wrap li .label .label-num:first-of-type {width: 45px; display: inline-block;}
 .horizontalbar-wrap li .label .label-num + .label-num {padding-left: 5px;}
-.horizontalbar-wrap li > .bar-wrap {width: 55%; }
-.horizontalbar-wrap li > .bar-wrap .bar {display: inline-block; background-color: #019fe0; text-align: right; padding: 0 10px;}
-.horizontalbar-wrap li > .bar-wrap .bar  b {color: #fff; }
-.horizontalbar-wrap li > .percent {width: 15%; color: #888; text-align: right;}
+.horizontalbar-wrap li .bar-percent {position: relative; width: calc(100% - 30%); display: flex; align-items: center; justify-content: space-between;}
+.horizontalbar-wrap li .bar-wrap {width: 85%; }
+.horizontalbar-wrap li .bar-wrap .bar {display: inline-block; background-color: #019fe0; text-align: right; padding: 0 10px;}
+.horizontalbar-wrap li .bar-wrap .bar  b {color: #fff; }
+.horizontalbar-wrap li .percent {width: 15%; color: #888; text-align: right;}
 
-.horizontalbar-wrap li > .bar-wrap .bar b {position: relative; overflow: visible;}
-.horizontalbar-wrap li > .bar-wrap .bar:hover b:before{
+.horizontalbar-wrap li .bar-wrap .bar b {position: relative; overflow: visible;}
+.horizontalbar-wrap li .bar-wrap .bar:hover b:before{
   content:'';
   position: absolute;
   width: 0;
@@ -150,7 +151,7 @@ body {scroll-behavior: smooth;}
   margin: auto 0;
   left: 28px;  
 }
-.horizontalbar-wrap li > .bar-wrap .bar:hover b:after {
+.horizontalbar-wrap li .bar-wrap .bar:hover b:after {
   content: attr(aria-label);
   position: absolute;
   top: -6px;;
@@ -212,17 +213,45 @@ body {scroll-behavior: smooth;}
 }
 
 @media all and (max-width:757.99px){
+  body.no-scroll {overflow: hidden;}
   #wrap.flex {flex-flow: column; gap: 10px;}
 
-  .leftmenu-wrap {width: 100%; height: 80px; z-index: 9;}
+  .leftmenu-wrap {width: 100%;z-index: 9;}
   .pc-header {display: none;}
-  .mo-header {display: block; height: 100%;}
+  .mo-header {display: block; height: 80px; position: sticky; top:0; background: #fff; z-index: 9;}
   .leftmenu {display: none;}
+  .leftmenu.open {display: block; width: 100%; height: calc(100vh - 80px); z-index: 99;}
 
   .mo-header .flex {align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;}
   .mo-header .logo img {width: 120px;}
-  .mo-header .mo-header-btn-wrap .btn {display: inline-flex; align-items: center; justify-content: center; background-color: #111; width: 36px; height: 36px; border-radius: 50%; margin-right: 5px;}
+  .mo-header .mo-header-btn-wrap .btn {display: inline-flex; align-items: center; justify-content: center; background-color: #111; width: 36px; height: 36px; border-radius: 50%; margin-right: 5px; vertical-align: middle;}
+  .mo-logout-btn {padding-left: 4px;}
   .mo-header .mo-header-btn-wrap .btn:last-child {margin: 0;}
+
+  .menu-wrap{
+    position: relative;
+    width: 15px;
+    height: 12px;
+    cursor: pointer;    
+  }
+  .menu-wrap .line{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 2px;
+    background: #fff;
+    left: 0;
+    top: 6px;
+    transition: .3s;
+    transform-origin: 50% 50%;
+  }
+  .menu-wrap .line:first-child{ transform: translate3d(0, -6px, 0px); }
+  .menu-wrap .line:last-child{transform: translate3d(0, 6px, 0px);} 
+  
+  .menu-wrap.open .line:first-child{transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0); }
+  .menu-wrap.open .line:nth-child(2){opacity: 0;}
+  .menu-wrap.open .line:last-child{transform: rotate3d(0, 0, 1, -45deg); }
+  
 
   #content {width: 100%;}
   .content-inner {width: 100%; min-width: auto;}
@@ -247,20 +276,35 @@ body {scroll-behavior: smooth;}
   .main-dashboard-card .item .item-body {padding: 0; background-color: #fff;}
   .main-dashboard-card .item .item-body > .flex {gap: 10px; flex-flow: column;}
   .main-dashboard-card .item .item-body .data-item {width: 100%; background-color: #f5f6f9; padding: 26px;}
+  .main-dashboard-card .item .item-body .data-item .data-item-body li.flex {padding: 4px 0;}
 
   .grid4 .item {width: 50%;}
   .main-piechart-wrap.flex {flex-flow:row; flex-wrap: wrap; gap: 10px 0;}
 
-  .main-barchart-wrap .item {padding: 26px;}
+  .main-barchart-wrap .item {padding: 26px; overflow: auto hidden;}
+  .horizontalbar-wrap li {padding: 10px 0;}
+  .barmix-chart .item-body {min-width: 600px;}
 
   .footer {flex-flow: column;}
   .footer ul + ul {margin-left: 0;}
   .footer ul:first-child b {width: 160px;}
+  .footer ul span {display: inline-block; width: calc(100% - 160px); word-break: keep-all;}
 }
 
-@media all and (max-width:519.99px){
+@media all and (max-width:519.99px){  
   :root {
     --layout-padding: 30px 20px;
   }
+  body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 14px;}
   .mo-header .flex { padding: 0 20px;}
+
+  .board-title {display: inline-block; max-width: 60%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+  .board-date1 {display: none;}
+}
+
+@media all and (max-width:455.99px){
+  
+  .horizontalbar-wrap li {flex-flow: column;}
+  .horizontalbar-wrap li .bar-percent {width: 100%;}
+  .grid4 .item {width: 100%;}
 }
